@@ -1,1 +1,1 @@
-# circuit-breakar
+# circuit-breaker
