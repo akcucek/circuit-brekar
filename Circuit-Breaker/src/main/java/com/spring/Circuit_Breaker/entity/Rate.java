@@ -13,7 +13,7 @@ import lombok.*;
 public class Rate {
 
     @Id
-    @Generated(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
     String type;
