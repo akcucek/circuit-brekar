@@ -19,5 +19,5 @@ public class Rate {
     String type;
 
     @Column(name = "rate")
-    String rateValue;
+    Double rateValue;
 }

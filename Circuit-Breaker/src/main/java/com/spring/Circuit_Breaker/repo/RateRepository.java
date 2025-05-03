@@ -2,11 +2,12 @@ package com.spring.Circuit_Breaker.repo;
 
 import com.spring.Circuit_Breaker.entity.Rate;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-
+@Repository
 public interface RateRepository extends JpaRepository<Rate, Integer> {
 
-    Optional<Rate> findByCurrency(String type);
+    Optional<Rate> findByType(String type);
 }
