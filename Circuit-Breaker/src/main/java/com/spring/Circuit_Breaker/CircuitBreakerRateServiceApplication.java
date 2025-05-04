@@ -19,14 +19,16 @@ public class CircuitBreakerRateServiceApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(CircuitBreakerRateServiceApplication.class, args);
+
 	}
 
-	@PostConstruct
-	public void setupData(){
+		@PostConstruct
+		public void setupData() {
 
-		rateRepository.saveAll(Arrays.asList(
+			rateRepository.saveAll(Arrays.asList(
+					Rate.builder().id(1).type("Personal").rateValue(10.0).build(),
+					Rate.builder().id(2).type("Housing").rateValue(8.0).build()));
 
-				Rate.builder().id(1).type("PERSONAL").rateValue(10.0).build(),
-				Rate.builder().id(1).type("HOUSING").rateValue(8.0).build()));
-	}
+		}
+
 }
